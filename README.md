@@ -1,14 +1,6 @@
 <div id="top"></div>
 
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -27,7 +19,6 @@
   </p>
 </div>
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/cloudy.png)
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -105,12 +96,12 @@ Step-by-step guide to running this NFT minter locally;
    ```
 2. Install NPM packages
    ```sh
-   yarn install
+   npm install
    ```
 
 3. Run your application
    ```sh
-   yarn start
+   npm start
    ```
 
 ### Smart-Contract-Deployment
@@ -139,7 +130,7 @@ Step-by-step guide to redeploying the NFT smart contract using your address to e
    ```
 5. Run the project
    ```sh
-    yarn start
+    npm start
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
