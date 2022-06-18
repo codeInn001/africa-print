@@ -1,8 +1,8 @@
 {
+  "homepage": "https://codeinn001.github.io/africa-print",
   "name": "NFTAfricaPrintsWaxCollection",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://${codeinn001}.github.io/${africa-print}",
   "dependencies": {
     "@celo-tools/use-contractkit": "3.0.0-beta2",
     "@celo/contractkit": "^1.5.2",
