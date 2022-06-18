@@ -29,6 +29,8 @@ coverage
 coverage.json
 typechain
 
+.yarn.lock
+
 # #Hardhat files
 # cache
 # artifacts
