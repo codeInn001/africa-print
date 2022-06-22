@@ -26,6 +26,7 @@ ReactDOM.render(
       dapp={{
         name: "Africa Wax Print NFT Marketplace",
         description: "A React Dapp for Africa Wax Print selling nfts",
+
       }}
     >
       <App />

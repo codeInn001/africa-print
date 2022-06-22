@@ -89,22 +89,7 @@ import { Button, Modal, Form, FloatingLabel } from "react-bootstrap";
             
           )}
 
-{isOwner ? (
-            <div className="d-flex m-2 justify-content-center">
-              <Button onClick={toggleForsale} className= "btn btn-primary w-50"
-              style={{backgroundColor:"#005"}}
-            >
-               {isForsale ? "toggle not for sale" : "toggle for sale"} 
-              </Button>
-              <div className="d-flex ms-1  justify-content-center ">
-              <p  className="align-self-end">{isForsale ? "collection for sale": "collection not for sale"}</p>
-              </div>
-            </div>
-          ) : (
-            <div className="d-flex m-2 justify-content-center">
-              <p>{isForsale ? "this item is for sale" : "this item is not for sale"}</p>
-            </div>
-          )}
+
 
               {showEditButton &&<Button
                 type="buton"

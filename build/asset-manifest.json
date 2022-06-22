@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/africa-print/static/css/main.2e7a0c45.chunk.css",
+    "main.js": "/africa-print/static/js/main.d1122a43.chunk.js",
+    "main.js.map": "/africa-print/static/js/main.d1122a43.chunk.js.map",
+    "runtime-main.js": "/africa-print/static/js/runtime-main.49b6d8b3.js",
+    "runtime-main.js.map": "/africa-print/static/js/runtime-main.49b6d8b3.js.map",
+    "static/css/2.9a3727cd.chunk.css": "/africa-print/static/css/2.9a3727cd.chunk.css",
+    "static/js/2.4e899675.chunk.js": "/africa-print/static/js/2.4e899675.chunk.js",
+    "static/js/2.4e899675.chunk.js.map": "/africa-print/static/js/2.4e899675.chunk.js.map",
+    "static/js/3.9da0e88a.chunk.js": "/africa-print/static/js/3.9da0e88a.chunk.js",
+    "static/js/3.9da0e88a.chunk.js.map": "/africa-print/static/js/3.9da0e88a.chunk.js.map",
+    "index.html": "/africa-print/index.html",
+    "static/css/2.9a3727cd.chunk.css.map": "/africa-print/static/css/2.9a3727cd.chunk.css.map",
+    "static/css/main.2e7a0c45.chunk.css.map": "/africa-print/static/css/main.2e7a0c45.chunk.css.map",
+    "static/js/2.4e899675.chunk.js.LICENSE.txt": "/africa-print/static/js/2.4e899675.chunk.js.LICENSE.txt",
+    "static/media/bootstrap-icons.css": "/africa-print/static/media/bootstrap-icons.c1d7432e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49b6d8b3.js",
+    "static/css/2.9a3727cd.chunk.css",
+    "static/js/2.4e899675.chunk.js",
+    "static/css/main.2e7a0c45.chunk.css",
+    "static/js/main.d1122a43.chunk.js"
+  ]
+}

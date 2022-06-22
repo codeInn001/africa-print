@@ -11,7 +11,9 @@ contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
   
     uint256 public tokenID;
 
-    constructor() ERC721("APNFT", "AFRICANPRINTNFT") {}
+
+    constructor() ERC721("APNFT", "AFRICAPRINTFT") {}
+
 
 
 
