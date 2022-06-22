@@ -24,8 +24,8 @@ ReactDOM.render(
         chainId: 44787,
       }}
       dapp={{
-        name: "Sneaker NFT Marketplace",
-        description: "A React Daap for selling virtual sneaker nfts",
+        name: "Africa Wax Print NFT Marketplace",
+        description: "A React Dapp for Africa Wax Print selling nfts",
       }}
     >
       <App />
