@@ -92,7 +92,7 @@ Step-by-step guide to running this NFT minter locally;
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/dacadeorg/celo-nft-minter.git
+   git clone https://github.com/codeInn001/africa-print
    ```
 2. Install NPM packages
    ```sh
