@@ -15,7 +15,7 @@
    An awesome NFT minter built on the Celo blockchain
     <br />
     <br />
-    <a href="https://codeinn001.github.io/africa-print">View Demo</a>
+    <a href=" https://home4hire.github.io/africa-print/t">View Demo</a>
   </p>
 </div>
 
