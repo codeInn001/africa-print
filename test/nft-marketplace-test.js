@@ -27,7 +27,7 @@ describe("NFTMarketplace", function () {
   const contractErrors = {
     zeroPrice: "Price should be above zero",
     alreadySold: "africa print already sold",
-    insufficientEther: "not enough balance",
+    insufficientEther: "You need to match the selling price",
     notFound: "africa print doesn't exist",
     insufficientPermission: "Can't perform transaction",
   };
@@ -68,10 +68,10 @@ describe("NFTMarketplace", function () {
   describe("listAfricaPrint", () => {
     it("should list a new africa print", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(10);
 
-      const africaPrintCount = 1;
+      const africaPrintCount = 0;
       await newListing(tokenURI, tokenId, tokenPrice);
 
       const africaPrint = await nftMarketplace.getAfricaPrint(africaPrintCount);
@@ -81,7 +81,7 @@ describe("NFTMarketplace", function () {
 
     it("should transfer token ownership to marketplace", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(10);
 
       await newListing(tokenURI, tokenId, tokenPrice);
@@ -91,7 +91,7 @@ describe("NFTMarketplace", function () {
 
     it("should fail to list africa print with zero price", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(0);
 
       await expect(
@@ -103,12 +103,12 @@ describe("NFTMarketplace", function () {
   describe("buyAfricaPrint", () => {
     it("should pay seller on successful purchase", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(10);
 
       await newListing(tokenURI, tokenId, tokenPrice);
 
-      const africaPrintCount = 1;
+      const africaPrintCount = 0;
 
       const initialSellerBalance = await ethers.provider.getBalance(
         acc1.address
@@ -120,12 +120,12 @@ describe("NFTMarketplace", function () {
 
     it("should transfer token ownership to buyer", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(10);
 
       await newListing(tokenURI, tokenId, tokenPrice);
 
-      const africaPrintCount = 1;
+      const africaPrintCount = 0;
 
       await buyAfricaPrint(acc2, africaPrintCount, tokenPrice);
       expect(await myNFT.ownerOf(tokenId)).to.equal(acc2.address);
@@ -133,12 +133,12 @@ describe("NFTMarketplace", function () {
 
     it("should fail to buy africa print without paying africa print price", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(10);
 
       await newListing(tokenURI, tokenId, tokenPrice);
 
-      const africaPrintCount = 1;
+      const africaPrintCount = 0;
 
       await expect(buyAfricaPrint(acc2, africaPrintCount, 0)).to.be.revertedWith(
         contractErrors.insufficientEther
@@ -150,13 +150,13 @@ describe("NFTMarketplace", function () {
   describe("modifyAfricaPrintPrice", () => {
     it("should allow owner change africa print price", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(10);
       const newTokenPrice = parseAmount(300);
 
       await newListing(tokenURI, tokenId, tokenPrice, acc1);
 
-      const africaPrintCount = 1;
+      const africaPrintCount = 0;
       let africaPrint = await nftMarketplace.getAfricaPrint(africaPrintCount);
       expect(africaPrint.price).to.equal(tokenPrice);
 
@@ -171,13 +171,13 @@ describe("NFTMarketplace", function () {
 
     it("should not allow non-owner change africa print price", async () => {
       const tokenURI = "https://example.com/1";
-      const tokenId = 1;
+      const tokenId = 0;
       const tokenPrice = parseAmount(10);
       const newTokenPrice = parseAmount(300);
 
       await newListing(tokenURI, tokenId, tokenPrice, acc1);
 
-      const africaPrintCount = 1;
+      const africaPrintCount = 0;
       let africaPrint = await nftMarketplace.getAfricaPrint(africaPrintCount);
       expect(africaPrint.price).to.equal(tokenPrice);
 
