@@ -7,9 +7,11 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
+contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable{
   
-    uint256 public tokenID;
+    using Counters for Counters.Counter;
+
+    Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("APNFT", "AFRICANPRINTNFT") {}
 
@@ -17,10 +19,12 @@ contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
 
     function mint(string memory _tokenURI) public returns (uint256) {
-        tokenID++;
-        _safeMint(msg.sender, tokenID);
-        _setTokenURI(tokenID, _tokenURI);
-        return (tokenID);
+        require(bytes(_tokenURI).length > 7, "Enter a valid token uri"); //ipfs uri starts with "ipfs://"
+        uint id = _tokenIdCounter.current();
+        _tokenIdCounter.increment();
+        _safeMint(msg.sender, id);
+        _setTokenURI(id, _tokenURI);
+        return (id);
     }
 
 

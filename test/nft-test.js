@@ -41,7 +41,7 @@ describe("MyNFT", function () {
     const tx2 = await myNFT.connect(owner).mint(tokenURI_2);
     await tx2.wait();
 
-    expect(await myNFT.tokenURI(1)).to.equal(tokenURI_1);
-    expect(await myNFT.tokenURI(2)).to.equal(tokenURI_2);
+    expect(await myNFT.tokenURI(0)).to.equal(tokenURI_1);
+    expect(await myNFT.tokenURI(1)).to.equal(tokenURI_2);
   });
 });
